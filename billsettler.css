@@ -1,0 +1,51 @@
+* {border-style:none; font-size:medium; font-style:normal; font-weight:normal; margin:0; padding:0; text-decoration:none;}
+body {cursor:default; background-color:#555753; color:#EEEEEC; font-family:Arial, Helvetica, Verdana, sans-serif; text-align:center;}
+a:link, a:visited, a:active {color:#C4A000;}
+a:hover {text-decoration:underline;}
+
+h1, h2 {color:#73D216; margin-bottom:1em;}
+h1 {margin-top:1em; font-size:x-large; font-weight:bold;}
+
+em {font-style:italic;}
+
+table {border-collapse:collapse; margin:auto;}
+td {border-style:none; text-align:center; vertical-align:top;}
+
+#layoutTable {border-collapse:separate; border-style:none; min-width:1200px; width:80%;}
+#layoutTable td {padding:1em;}
+#memberCell {border:1px #2E3436 solid; width:23%;}
+#debtCell {border-style:none; width:77%;}
+#resultCell {border:1px #2E3436 solid; display:none;}
+
+#debtTitle {display:none;}
+
+li {margin:0.5em 1.5em;}
+
+.member {width:8em;}
+.memberSelect {width:8em;}
+.amount {text-align:right; width:5em;}
+
+#resultCellTable {width:80%;}
+#resultCellTable > tr > td {border-style:none;}
+#resultTableCell {border-right:1px #FFFFFF solid; width:65%;}
+#resultListCell {border-left:1px #FFFFFF solid; width:35%; text-align:left;}
+#resultList li:first-child {margin:0em 1.5em;}
+
+#resultTable {width:100%;}
+#resultTable th {border-style:none; text-align:right;}
+#resultTable th:first-child {text-align:center;}
+#resultTable td {border-style:none; padding:0; text-align:right;}
+#resultTable td:first-child {text-align:center;}
+#resultTable tr:last-child {border-top:1px #FFFFFF solid;}
+
+#dotToggle {color:#555753; font-size:small;}
+#dotToggle:hover {color:#EEEEEC; cursor:pointer; text-decoration:underline;}
+#dot {display:none;}
+
+@media print {
+	h2 {color:#4E9A06;}
+	#memberList li:last-child, #debtList li:last-child {display:none}
+	#resultTableCell {border-right-color:#2E3436;}
+	#resultListCell {border-left-color:#2E3436;}
+	#dotToggle, #dot {display:none;}
+}

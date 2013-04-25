@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Bill Settler</title>
+		<link href="billsettler.css" rel="stylesheet" type="text/css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+		<script src="billsettler.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<h1>Bill Settler</h1>
+		<table id="layoutTable">
+			<tr>
+				<td id="memberCell">
+					<h2><em>Who</em> was involved?</h2>
+					<ul id="memberList"></ul>
+				</td>
+				<td id="debtCell">
+					<h2 id="debtTitle"><em>Who</em> paid <em>how much</em> to buy <em>what</em> for <em>whom</em>?</h2>
+					<ul id="debtList"></ul>
+				</td>
+				</tr><tr>
+				<td id="resultCell" colspan="2">
+					<h2><em>Who</em> owes <em>whom</em> <em>how much</em>?</h2>
+					<table id="resultCellTable"><tr>
+							<td id="resultTableCell">
+								<table id="resultTable">
+									<thead id="resultHeader">
+										<tr>
+											<th>Name</th>
+											<th>Paid</th>
+											<th>Should Pay</th>
+											<th>Still Needs to Pay</th>
+										</tr>
+										<tr><th colspan="4">&nbsp;</th></tr>
+									</thead>
+								</table>
+							</td>
+							<td id="resultListCell">
+								<ul id="resultList"></ul>
+							</td>
+					</tr></table>
+				</td>
+			</tr>
+		</table>
+		<script type="text/javascript">init();</script>
+		<div style="text-align:left;">
+			<p><span id="dotToggle" onClick="toggleDot();">Toggle DOT Graph</span></p><br>
+			<pre id="dot">
+digraph {
+}
+			</pre>
+		</div>
+	</body>
+</html>
