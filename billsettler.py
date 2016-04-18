@@ -1,4 +1,4 @@
-from os import chdir, getcwd
+from os import chdir
 from os.path import dirname, realpath
 
 from flask import Flask, send_from_directory
@@ -10,7 +10,7 @@ def serve():
     return send_from_directory('static', 'billsettler.html')
 
 @app.route('/<file>')
-def serve_css(file):
+def serve_file(file):
     return send_from_directory('static', file)
 
 if __name__ == '__main__':
