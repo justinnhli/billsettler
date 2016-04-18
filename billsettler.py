@@ -1,22 +1,18 @@
-from os import chdir
-from os.path import dirname
+from os import chdir, getcwd
+from os.path import dirname, realpath
 
 from flask import Flask, send_from_directory
 
 app = Flask(__name__)
 
 @app.route('/')
-def serve(file):
+def serve():
     return send_from_directory('static', 'billsettler.html')
 
-@app.route('/billsettler.css')
+@app.route('/<file>')
 def serve_css(file):
-    return send_from_directory('static', 'billsettler.css')
-
-@app.route('/billsettler.js')
-def serve_js(file):
-    return send_from_directory('static', 'billsettler.js')
+    return send_from_directory('static', file)
 
 if __name__ == '__main__':
-    chdir(dirname(__file__))
+    chdir(dirname(realpath(__file__)))
     app.run()
