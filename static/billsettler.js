@@ -25,9 +25,9 @@ var addDebtItem, addMemberItem, beautifyNumber, checkNumber, createMemberSelecto
 
 // INIT
 
-function init() {
+$(document).ready(function() {
 	addMemberItem();
-}
+});
 
 // MEMBER LIST
 
